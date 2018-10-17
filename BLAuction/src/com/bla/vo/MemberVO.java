@@ -20,6 +20,7 @@ public class MemberVO {
 		super();
 	}
 
+
 	public MemberVO(int member_id, String email, String pw, String name, String address, String phone, String birth, int score,
 			int likes, String member_account) {
 		super();

@@ -2,23 +2,18 @@ package com.bla.biz;
 
 import java.util.ArrayList;
 
-import javax.annotation.Resource;
+import org.springframework.stereotype.Repository;
 
-
-import com.bla.dao.MemberDao;
 import com.bla.frame.Biz;
 import com.bla.vo.MemberVO;
 
-@org.springframework.stereotype.Service("mbiz")
-public class MemberBiz implements Biz<MemberVO,String> {
-
-	@Resource(name = "mdao")
-	MemberDao dao;
+@Repository("mbiz")
+public class MemberBiz implements Biz<MemberVO,Integer> {
 
 	@Override
 	public void register(MemberVO t) throws Exception {
 		// TODO Auto-generated method stub
-		dao.insert(t);
+		
 	}
 
 	@Override
@@ -28,15 +23,15 @@ public class MemberBiz implements Biz<MemberVO,String> {
 	}
 
 	@Override
-	public void remove(String v) throws Exception {
+	public void remove(Integer v) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public MemberVO get(String v) throws Exception {
+	public MemberVO get(Integer v) throws Exception {
 		// TODO Auto-generated method stub
-		return dao.select(v);
+		return null;
 	}
 
 	@Override
@@ -44,8 +39,5 @@ public class MemberBiz implements Biz<MemberVO,String> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
-
 
 }
